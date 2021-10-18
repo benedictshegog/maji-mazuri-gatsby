@@ -61,7 +61,8 @@ a {
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
-  color: ${colors.grey400}
+  color: ${colors.grey400};
+  text-decoration: none;
 }
 
 body {
@@ -79,10 +80,10 @@ const PageWrapper = styled.div`
   width: 80%;
 `;
 
-export default function Layout({ children }) {
+export default function Layout({ children }, props) {
   return (
     <>
-      <Header />
+      <Header url={props.url} />
       <GlobalStyle theme="purple" />
       <PageWrapper>{children}</PageWrapper>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import StandardPage from "../components/standardPage";
+import NarrowPage from "../components/narrowPage";
 import { RichText } from "prismic-reactjs";
 
 const PageTemplate = ({ data }) => {
@@ -10,11 +10,11 @@ const PageTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <StandardPage>
+      <NarrowPage>
         {console.log(document.data)}
         <h2>{document.data.page_title.text}</h2>
         <RichText render={document.data.page_content.raw} />
-      </StandardPage>
+      </NarrowPage>
     </Layout>
   );
 };

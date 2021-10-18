@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 
 const Background = styled.div`
   width: 100%;
-  /* background-color: black; */
   margin: 0px;
   padding-bottom: 200px;
 `;
@@ -21,9 +20,11 @@ const MenuItem = styled.a`
   margin-right: 32px;
   margin-top: 0px;
   margin-bottom: 0px;
+  color: white;
 `;
 
-export default function header() {
+export default function header(props) {
+  console.log(props);
   return (
     <Background>
       <MenuGroup>

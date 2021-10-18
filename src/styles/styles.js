@@ -5,5 +5,12 @@ export const colors = {
   backgroundblue: "#FBFCFF",
   grey300: "#797788",
   grey500: "#39383F",
-  red500: "#E33535",
+  red400: "#E86161",
+};
+
+export const devices = {
+  giant: "1170px",
+  desktop: "992px",
+  tablet: "768px",
+  phone: "375px",
 };
