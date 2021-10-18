@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
+
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -23,6 +24,17 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: "maji-mazuri-gatsby",
+        linkResolver: require("./src/utils/linkResolver").linkResolver,
+        schemas: {
+          standard_page: require("./src/schemas/standard_page.json"),
+          page: require("./src/schemas/page.json"),
+        },
+      },
     },
   ],
 };
