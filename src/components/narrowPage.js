@@ -7,6 +7,6 @@ const Background = styled.div`
   margin-right: auto;
 `;
 
-export default function standardPage({ children }) {
+export default function NarrowPage({ children }) {
   return <Background>{children}</Background>;
 }

@@ -11,7 +11,6 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout>
       <NarrowPage>
-        {console.log(document.data)}
         <h2>{document.data.page_title.text}</h2>
         <RichText render={document.data.page_content.raw} />
       </NarrowPage>

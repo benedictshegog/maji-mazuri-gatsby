@@ -6,8 +6,9 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 import { colors } from "../styles/styles.js";
-
-import Header from "../components/header";
+import NavBar from "./navBar";
+import MobileNavBar from "./mobileNavBar";
+import useWindowSize from "../utils/useWindowSize";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -80,12 +81,17 @@ const PageWrapper = styled.div`
   width: 80%;
 `;
 
-export default function Layout({ children }, props) {
+export default function Layout(props) {
+  const { width } = useWindowSize();
   return (
     <>
-      <Header url={props.url} />
+      {width > "700" ? (
+        <NavBar landingPage={props.landingPage} />
+      ) : (
+        <MobileNavBar />
+      )}
       <GlobalStyle theme="purple" />
-      <PageWrapper>{children}</PageWrapper>
+      <PageWrapper>{props.children}</PageWrapper>
     </>
   );
 }

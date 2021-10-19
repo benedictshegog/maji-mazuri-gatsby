@@ -1,6 +1,7 @@
 import * as React from "react";
-import Layout from "../components/layout";
 import styled from "styled-components";
+
+import Layout from "../components/layout";
 import HeaderImage from "../components/headerImage";
 import HeaderContents from "../components/headerContents";
 import NarrowPage from "../components/narrowPage";
@@ -14,9 +15,9 @@ const StyledBodyArea = styled.div`
 
 const CardContainer = styled.div``;
 
-const IndexPage = ({ location }) => {
+const IndexPage = () => {
   return (
-    <Layout url={location.href ? location.href : "Nothing"}>
+    <Layout landingPage>
       <HeaderImage>
         <HeaderContents />
       </HeaderImage>
