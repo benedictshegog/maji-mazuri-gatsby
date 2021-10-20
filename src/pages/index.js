@@ -9,7 +9,8 @@ import Card from "../components/card";
 
 const StyledBodyArea = styled.div`
   text-align: center;
-  position: relative;
+  //removed below because it messes with the hamburger menu's item's click areas
+  /* position: relative; */
   padding-top: 500px;
 `;
 
