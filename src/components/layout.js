@@ -9,6 +9,7 @@ import { colors } from "../styles/styles.js";
 import NavBar from "./navBar";
 import MobileNavBar from "./mobileNavBar";
 import useWindowSize from "../utils/useWindowSize";
+import Footer from "./footer";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -73,6 +74,31 @@ body {
   top: 0;
   margin: 0;
 }
+
+input {
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid ${colors.grey200};
+  width: 90%;
+  max-width: 400px;
+  margin: 0 8px 16px 0;
+  padding-left: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  min-width: 126px;
+  border: none;
+  color: white;
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: ${colors.red400};
+  border-radius: 5px;
+}
 `;
 
 const PageWrapper = styled.div`
@@ -92,6 +118,7 @@ export default function Layout(props) {
       )}
       <GlobalStyle theme="purple" />
       <PageWrapper>{props.children}</PageWrapper>
+      <Footer width={width} />
     </>
   );
 }
