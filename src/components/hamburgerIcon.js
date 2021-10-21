@@ -3,14 +3,17 @@ import styled from "styled-components";
 
 const HamburgerIcon = styled.div`
   cursor: pointer;
-  margin: 32px;
+  margin: 5%;
+  @media (min-width: 700px) {
+    margin: 32px;
+  }
 `;
 
 const TopDiv = styled.div`
   transition: all 0.3s;
   width: 32px;
   height: 3px;
-  background-color: ${(props) => (props.white ? "white" : "black")};
+  background-color: ${(props) => (props.lightMenu ? "black" : "white")};
   border-radius: 10px;
   position: relative;
   top: ${(props) => (props.clicked ? "0" : "4px")};
@@ -23,7 +26,7 @@ const BottomDiv = styled.div`
   height: 3px;
   border-radius: 10px;
   position: relative;
-  background-color: ${(props) => (props.white ? "white" : "black")};
+  background-color: ${(props) => (props.lightMenu ? "black" : "white")};
   top: ${(props) => (props.clicked ? "0" : "-4px")};
   transform: ${(props) => (props.clicked ? "rotate(0)" : "rotate(135deg)")};
   margin: 6px 0;
@@ -34,14 +37,13 @@ export default function HamburgerButton(props) {
   const handleClick = () => {
     setClick(({ click }) => ({ click: !click }));
     props.onClick();
-    console.log("handleClick", click);
   };
 
   return (
     <div>
       <HamburgerIcon onClick={handleClick}>
-        <TopDiv white={props.white} clicked={click} />
-        <BottomDiv white={props.white} clicked={click} />
+        <TopDiv lightMenu={props.lightMenu} clicked={click} />
+        <BottomDiv lightMenu={props.lightMenu} clicked={click} />
       </HamburgerIcon>
     </div>
   );

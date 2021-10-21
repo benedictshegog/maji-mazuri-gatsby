@@ -18,7 +18,7 @@ const CardContainer = styled.div``;
 
 const IndexPage = () => {
   return (
-    <Layout landingPage>
+    <Layout lightMenu={false} landingPage>
       <HeaderImage>
         <HeaderContents />
       </HeaderImage>

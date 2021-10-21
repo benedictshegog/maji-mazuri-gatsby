@@ -7,9 +7,11 @@ import Button from "./button";
 import { colors } from "../styles/styles";
 
 const Container = styled.div`
-  margin: 175px 50px 0 50px;
-  width: 100%;
+  margin: 175px 0px 0 0px;
+  width: 95%;
   @media (min-width: ${devices.tablet}) {
+    width: 100%;
+    margin: 175px 50px 0 50px;
     display: flex;
     flex-direction: row;
   }

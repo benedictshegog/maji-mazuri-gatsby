@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
+import { Link } from "gatsby";
+import { colors } from "../styles/styles";
 
 import HamburgerIcon from "./hamburgerIcon";
 
@@ -18,9 +20,10 @@ const MobileMenuBackground = styled.div`
 
 const MenuItem = styled.h2`
   text-align: center;
+  color: ${(props) => (props.lightMenu ? colors.grey500 : "white")};
 `;
 
-export default function MobileNavBar() {
+export default function MobileNavBar(props) {
   const [showMenu, setShowMenu] = useState(true);
   const handleClick = () => {
     setShowMenu(!showMenu);
@@ -28,23 +31,46 @@ export default function MobileNavBar() {
 
   function handleNavigate(page) {
     return function () {
-      console.log("Trying to handle");
       navigate(page);
     };
   }
-
   return (
     <>
       {showMenu ? (
-        <HamburgerIcon onClick={handleClick} white />
+        <HamburgerIcon onClick={handleClick} lightMenu={props.lightMenu} />
       ) : (
         <MobileMenuBackground>
           <HamburgerIcon onClick={handleClick} />
-          <MenuItem onClick={handleNavigate("/about")}>About</MenuItem>
-          <MenuItem onClick={handleNavigate("/volunteer")}>Volunteer</MenuItem>
-          <MenuItem onClick={handleNavigate("/contact")}>Contact</MenuItem>
-          <MenuItem onClick={handleNavigate("/blog")}>Blog</MenuItem>
-          <MenuItem onClick={handleNavigate("/donate")}>Donate</MenuItem>
+          <MenuItem
+            lightMenu={props.lightMenu}
+            onClick={handleNavigate("/about")}
+          >
+            About
+          </MenuItem>
+          <MenuItem
+            lightMenu={props.lightMenu}
+            onClick={handleNavigate("/volunteer")}
+          >
+            Volunteer
+          </MenuItem>
+          <MenuItem
+            lightMenu={props.lightMenu}
+            onClick={handleNavigate("/contact")}
+          >
+            Contact
+          </MenuItem>
+          <MenuItem
+            lightMenu={props.lightMenu}
+            onClick={handleNavigate("/blog")}
+          >
+            Blog
+          </MenuItem>
+          <MenuItem
+            lightMenu={props.lightMenu}
+            onClick={handleNavigate("/donate")}
+          >
+            Donate
+          </MenuItem>
         </MobileMenuBackground>
       )}
     </>

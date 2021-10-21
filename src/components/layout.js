@@ -104,7 +104,12 @@ button {
 const PageWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
+  padding-top: 100px;
+  @media (min-width: 700px) {
+    padding-top: 200px;
+    width: 80%;
+  }
 `;
 
 export default function Layout(props) {
@@ -112,9 +117,9 @@ export default function Layout(props) {
   return (
     <>
       {width > "700" ? (
-        <NavBar landingPage={props.landingPage} />
+        <NavBar lightMenu={props.lightMenu} landingPage={props.landingPage} />
       ) : (
-        <MobileNavBar />
+        <MobileNavBar lightMenu={props.lightMenu} />
       )}
       <GlobalStyle theme="purple" />
       <PageWrapper>{props.children}</PageWrapper>

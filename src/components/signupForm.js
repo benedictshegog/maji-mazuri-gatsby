@@ -66,7 +66,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         />
         <StyledButton onClick={submit}>Submit</StyledButton>
       </FormContainer>
-      <p style={{ width: "300px" }}>
+      <p style={{ maxWidth: "300px" }}>
         {status === "sending" && <p>Signing up...</p>}
         {status === "error" && (
           <p

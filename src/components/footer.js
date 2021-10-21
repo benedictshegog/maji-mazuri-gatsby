@@ -6,23 +6,25 @@ import { navigate } from "gatsby";
 import SignupForm from "./signupForm";
 
 const Background = styled.div`
-  width: 100%;
   background-color: ${colors.backgroundblue};
   margin-top: 148px;
-  padding: 64px 32px;
+  padding: 64px 16px;
+  @media (min-width: 700px) {
+    flex-direction: row;
+    padding: 64px 32px;
+  }
 `;
 
 const FooterContent = styled.div`
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
+  width: 95%;
   @media (min-width: 700px) {
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
     flex-direction: row;
-    /* align-items: center; */
+    width: 80%;
   }
 `;
 
@@ -32,14 +34,11 @@ const Link = styled.p`
 
 function handleNavigate(page) {
   return function () {
-    console.log("Trying to handle");
     navigate(page);
   };
 }
 
 export default function Footer(props) {
-  console.log(props);
-
   return (
     <Background>
       <FooterContent props={props}>
@@ -92,7 +91,6 @@ export default function Footer(props) {
 // }
 
 // export default function Footer(props) {
-//   console.log(props.width);
 
 //   return (
 //     <Background>

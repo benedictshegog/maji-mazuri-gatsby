@@ -7,7 +7,6 @@ import logo from "../images/logo.png";
 const Background = styled.div`
   width: 100%;
   margin: 0px;
-  padding-bottom: 200px;
   display: flex;
   justify-content: space-between;
 `;
@@ -24,9 +23,8 @@ const MenuItem = styled.p`
   margin-right: 32px;
   margin-top: 0px;
   margin-bottom: 0px;
-  color: white;
   font-weight: 700;
-  color: ${(props) => (props.landingPage ? "white" : colors.grey500)};
+  color: ${(props) => (props.lightMenu ? colors.grey500 : "white")};
 `;
 
 const Logo = styled.img`
@@ -43,19 +41,29 @@ export default function navBar(props) {
       </Link>
       <MenuGroup>
         <Link to="/about">
-          <MenuItem landingPage={props.landingPage}>About</MenuItem>
+          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+            About
+          </MenuItem>
         </Link>
         <Link to="/volunteer">
-          <MenuItem landingPage={props.landingPage}>Volunteer</MenuItem>
+          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+            Volunteer
+          </MenuItem>
         </Link>
         <Link to="/contact">
-          <MenuItem landingPage={props.landingPage}>Contact</MenuItem>
+          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+            Contact
+          </MenuItem>
         </Link>
         <Link to="/blog">
-          <MenuItem landingPage={props.landingPage}>Blog</MenuItem>
+          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+            Blog
+          </MenuItem>
         </Link>
         <Link to="/donate">
-          <MenuItem landingPage={props.landingPage}>Donate</MenuItem>
+          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+            Donate
+          </MenuItem>
         </Link>
       </MenuGroup>
     </Background>
