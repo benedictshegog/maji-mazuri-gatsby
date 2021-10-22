@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "maji-mazuri-gatsby",
+    siteUrl: "https://www.majimazuri.org",
+    title: "Maji Mazuri",
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     "gatsby-plugin-styled-components",
-
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -35,6 +35,18 @@ module.exports = {
           page: require("./src/schemas/page.json"),
           post: require("./src/schemas/post.json"),
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "React go",
+        short_name: "Reactgo",
+        start_url: "/",
+        background_color: "#f7f0eb",
+        theme_color: "#a2466c",
+        display: "standalone",
+        icon: "src/images/favicon.png",
       },
     },
   ],

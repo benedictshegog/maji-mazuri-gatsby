@@ -4,6 +4,7 @@ import "@fontsource/nunito-sans/700.css";
 import "@fontsource/nunito-sans/900.css";
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 
 import { colors } from "../styles/styles.js";
 import NavBar from "./navBar";
@@ -125,6 +126,15 @@ export default function Layout(props) {
   const { width } = useWindowSize();
   return (
     <>
+      <Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Maji Mazuri | Kenyan NGO</title>
+        <meta name="icon" href="/src/images/favicon.ico" />
+        <meta
+          name="description"
+          content="A grassroots charity operating a school and a children's center in Nairobi"
+        />
+      </Helmet>
       <NavBar
         darkTextMenu={props.darkTextMenu}
         landingPage={props.landingPage}

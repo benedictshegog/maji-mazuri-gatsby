@@ -35,14 +35,6 @@ const Logo = styled.img`
 const IndexPage = () => {
   return (
     <>
-      <Helmet htmlAttributes>
-        <html lang="en" />
-        <title>Maji Mazuri | Kenyan NGO</title>
-        <meta
-          name="description"
-          content="A grassroots charity operating a school and a children's center in Nairobi"
-        />
-      </Helmet>
       <HeaderImage>
         <HeaderContents />
       </HeaderImage>
