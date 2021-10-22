@@ -9,6 +9,8 @@ const Background = styled.div`
   margin: 0px;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
 `;
 
 const MenuGroup = styled.div`

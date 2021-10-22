@@ -10,7 +10,7 @@ const MobileMenuBackground = styled.div`
   height: 100%;
   width: 100%;
   position: fixed; /* Stay in place */
-  z-index: 3; /* Sit on top */
+  z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
   background-color: white;

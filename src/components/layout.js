@@ -105,7 +105,7 @@ const PageWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  padding-top: 10%;
+  padding-top: 15%;
   @media (min-width: 700px) {
     padding-top: 200px;
     width: 80%;

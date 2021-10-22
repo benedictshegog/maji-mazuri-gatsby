@@ -5,10 +5,10 @@ import { devices } from "../styles/styles";
 import image from "../images/planes.jpeg";
 
 const StyledImageBlock = styled.div`
-  position: absolute;
+  /* position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 0; */
   z-index: -1;
   background-size: 100%;
   height: 100vh;

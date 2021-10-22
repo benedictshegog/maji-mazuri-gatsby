@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { devices } from "../styles/styles";
+import { devices, colors } from "../styles/styles";
 
 import Button from "./button";
-import { colors } from "../styles/styles";
 
 const Container = styled.div`
   margin: 175px 0px 0 0px;
   width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   @media (min-width: ${devices.tablet}) {
     width: 100%;
     margin: 175px 50px 0 50px;

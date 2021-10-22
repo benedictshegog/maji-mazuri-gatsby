@@ -4,6 +4,8 @@ import styled from "styled-components";
 const HamburgerIcon = styled.div`
   cursor: pointer;
   margin: 5%;
+  position: absolute;
+  top: 0;
   @media (min-width: 700px) {
     margin: 32px;
   }
