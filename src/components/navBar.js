@@ -7,10 +7,13 @@ import logo from "../images/logo.png";
 const Background = styled.div`
   width: 100%;
   margin: 0px;
-  display: flex;
   justify-content: space-between;
   position: absolute;
   top: 0;
+  display: none;
+  @media (min-width: 700px) {
+    display: flex;
+  }
 `;
 
 const MenuGroup = styled.div`

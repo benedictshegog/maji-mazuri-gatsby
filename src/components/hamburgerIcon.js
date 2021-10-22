@@ -6,7 +6,9 @@ const HamburgerIcon = styled.div`
   margin: 5%;
   position: absolute;
   top: 0;
+  visibility: visible;
   @media (min-width: 700px) {
+    visibility: hidden;
     margin: 32px;
   }
 `;

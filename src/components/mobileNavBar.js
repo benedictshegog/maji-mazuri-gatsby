@@ -15,6 +15,11 @@ const MobileMenuBackground = styled.div`
   top: 0;
   background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
+  visibility: visible;
+  display: block;
+  @media (min-width: 700px) {
+    display: hidden;
+  }
 `;
 
 const MenuItem = styled.h2`

@@ -125,14 +125,11 @@ export default function Layout(props) {
   const { width } = useWindowSize();
   return (
     <>
-      {width > "700" ? (
-        <NavBar
-          darkTextMenu={props.darkTextMenu}
-          landingPage={props.landingPage}
-        />
-      ) : (
-        <MobileNavBar darkTextMenu={props.darkTextMenu} />
-      )}
+      <NavBar
+        darkTextMenu={props.darkTextMenu}
+        landingPage={props.landingPage}
+      />
+      <MobileNavBar darkTextMenu={props.darkTextMenu} />
       <GlobalStyle theme="purple" />
       <PageWrapper>{props.children}</PageWrapper>
       <Footer width={width} />
