@@ -21,7 +21,7 @@ const PageTemplate = ({ data }) => {
 
   return (
     <>
-      <Layout lightMenu={false}>
+      <Layout darkTextMenu={false}>
         <NarrowPage>
           <PostAuthor>Posted by {document.data.author.text}</PostAuthor>
           <h2>{document.data.title.text}</h2>

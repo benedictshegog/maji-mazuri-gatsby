@@ -28,7 +28,7 @@ const Posts = ({ data }) => {
 
   return (
     <>
-      <Layout lightMenu={false}>
+      <Layout darkTextMenu={false}>
         <NarrowPage>
           {posts.map((post) => {
             return (

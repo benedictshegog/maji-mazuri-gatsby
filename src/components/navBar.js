@@ -26,7 +26,7 @@ const MenuItem = styled.p`
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 700;
-  color: ${(props) => (props.lightMenu ? "white" : colors.grey500)};
+  color: ${(props) => (props.darkTextMenu ? colors.grey500 : "white")};
 `;
 
 const Logo = styled.img`
@@ -43,27 +43,42 @@ export default function navBar(props) {
       </Link>
       <MenuGroup>
         <Link to="/about">
-          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+          <MenuItem
+            darkTextMenu={props.darkTextMenu}
+            landingPage={props.landingPage}
+          >
             About
           </MenuItem>
         </Link>
         <Link to="/volunteer">
-          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+          <MenuItem
+            darkTextMenu={props.darkTextMenu}
+            landingPage={props.landingPage}
+          >
             Volunteer
           </MenuItem>
         </Link>
         <Link to="/contact">
-          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+          <MenuItem
+            darkTextMenu={props.darkTextMenu}
+            landingPage={props.landingPage}
+          >
             Contact
           </MenuItem>
         </Link>
         <Link to="/posts">
-          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+          <MenuItem
+            darkTextMenu={props.darkTextMenu}
+            landingPage={props.landingPage}
+          >
             Blog
           </MenuItem>
         </Link>
         <Link to="/donate">
-          <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
+          <MenuItem
+            darkTextMenu={props.darkTextMenu}
+            landingPage={props.landingPage}
+          >
             Donate
           </MenuItem>
         </Link>

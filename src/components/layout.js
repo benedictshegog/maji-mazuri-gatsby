@@ -126,9 +126,12 @@ export default function Layout(props) {
   return (
     <>
       {width > "700" ? (
-        <NavBar lightMenu={props.lightMenu} landingPage={props.landingPage} />
+        <NavBar
+          darkTextMenu={props.darkTextMenu}
+          landingPage={props.landingPage}
+        />
       ) : (
-        <MobileNavBar lightMenu={props.lightMenu} />
+        <MobileNavBar darkTextMenu={props.darkTextMenu} />
       )}
       <GlobalStyle theme="purple" />
       <PageWrapper>{props.children}</PageWrapper>

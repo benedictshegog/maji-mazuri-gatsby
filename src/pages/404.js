@@ -5,7 +5,7 @@ import NarrowPage from "../components/narrowPage";
 const FourZeroFour = () => {
   return (
     <>
-      <Layout lightMenu={false}>
+      <Layout darkTextMenu={false}>
         <NarrowPage>
           <h2>Hmmm. This page is missing</h2>
           <a style={{ cursor: "pointer", fontWeight: "normal" }} href={"/"}>

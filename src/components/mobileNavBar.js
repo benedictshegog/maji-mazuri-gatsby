@@ -32,15 +32,20 @@ export default function MobileNavBar(props) {
   function handleNavigate(page) {
     return function () {
       navigate(page);
+      handleClick();
     };
   }
+
   return (
     <>
       {showMenu ? (
-        <HamburgerIcon onClick={handleClick} lightMenu={props.lightMenu} />
+        <HamburgerIcon
+          onClick={handleClick}
+          darkTextMenu={props.darkTextMenu}
+        />
       ) : (
         <MobileMenuBackground>
-          <HamburgerIcon lightMenu={false} onClick={handleClick} />
+          <HamburgerIcon darkTextMenu={true} onClick={handleClick} />
           <MenuItem onClick={handleNavigate("/")} style={{ paddingTop: "10%" }}>
             Home
           </MenuItem>

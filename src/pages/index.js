@@ -33,7 +33,7 @@ const IndexPage = () => {
       <HeaderImage>
         <HeaderContents />
       </HeaderImage>
-      <Layout lightMenu={true} landingPage>
+      <Layout darkTextMenu={false} landingPage>
         <StyledBodyArea>
           <TextArea>
             <h3>Our work</h3>
