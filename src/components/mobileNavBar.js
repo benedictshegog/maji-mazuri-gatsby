@@ -30,6 +30,7 @@ const MenuItem = styled.h2`
 
 export default function MobileNavBar(props) {
   const [showMenu, setShowMenu] = useState(true);
+
   const handleClick = () => {
     setShowMenu(!showMenu);
   };
