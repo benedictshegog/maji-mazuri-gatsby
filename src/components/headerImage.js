@@ -5,16 +5,13 @@ import { devices } from "../styles/styles";
 import image from "../images/planes.jpeg";
 
 const StyledImageBlock = styled.div`
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; */
   z-index: -1;
   background-size: 100%;
   height: 100vh;
   width: 100%;
   display: flex;
-  height: 700px;
+  min-height: 700px;
+  height: 100%;
   background-color: #2a323b;
   background: url(${image}) no-repeat center center fixed;
   box-shadow: inset 0 0 0 1000px rgba(23, 27, 62, 0.9);

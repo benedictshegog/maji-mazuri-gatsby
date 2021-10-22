@@ -8,13 +8,14 @@ const StyledLink = styled.a`
 `;
 
 const CardBackground = styled.div`
+  /* max-width: 300px; */
   background-color: ${colors.grey100};
   padding: 32px;
   text-align: left;
   border-radius: 10px;
-  margin: 32px;
+  /* margin: 32px; */
   @media (min-width: 700px) {
-    margin: 64px;
+    /* margin: 64px; */
     flex-direction: row;
     align-items: flex-start;
     margin-top: 0px;

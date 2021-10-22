@@ -11,6 +11,7 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout lightMenu={false}>
       <NarrowPage>
+        <div style={{ marginTop: "20%" }} />
         <h2>{document.data.page_title.text}</h2>
         <RichText render={document.data.page_content.raw} />
       </NarrowPage>

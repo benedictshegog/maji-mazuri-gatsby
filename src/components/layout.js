@@ -105,9 +105,9 @@ const PageWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  padding-top: 15%;
+  padding-top: 32px;
   @media (min-width: 700px) {
-    padding-top: 200px;
+    padding-top: 64px;
     width: 80%;
   }
 `;
