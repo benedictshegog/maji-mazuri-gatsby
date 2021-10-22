@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import HeaderImage from "../components/headerImage";
 import HeaderContents from "../components/headerContents";
 import Card from "../components/card";
+import logo from "../images/logo.png";
 
 const StyledBodyArea = styled.div`
   text-align: center;
@@ -27,15 +28,28 @@ const CardContainer = styled.div`
   justify-content: center;
 `;
 
+const Logo = styled.img`
+  height: 76px;
+`;
+
 const IndexPage = () => {
   return (
     <>
+      <Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Maji Mazuri | Kenyan NGO</title>
+        <meta
+          name="description"
+          content="A grassroots charity operating a school and a children's center in Nairobi"
+        />
+      </Helmet>
       <HeaderImage>
         <HeaderContents />
       </HeaderImage>
       <Layout darkTextMenu={false} landingPage>
         <StyledBodyArea>
           <TextArea>
+            <Logo src={logo} />
             <h3>Our work</h3>
             <h2>
               We operate a range of programmes including a 550 pupil school, an

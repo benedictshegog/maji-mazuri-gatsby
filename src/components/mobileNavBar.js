@@ -51,7 +51,7 @@ export default function MobileNavBar(props) {
       ) : (
         <MobileMenuBackground>
           <HamburgerIcon darkTextMenu={true} onClick={handleClick} />
-          <MenuItem onClick={handleNavigate("/")} style={{ paddingTop: "10%" }}>
+          <MenuItem onClick={handleNavigate("/")} style={{ paddingTop: "20%" }}>
             Home
           </MenuItem>
           <MenuItem onClick={handleNavigate("/about")}>About</MenuItem>

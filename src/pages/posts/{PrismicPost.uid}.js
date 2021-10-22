@@ -21,8 +21,9 @@ const PageTemplate = ({ data }) => {
 
   return (
     <>
-      <Layout darkTextMenu={false}>
+      <Layout darkTextMenu={true}>
         <NarrowPage>
+          <div style={{ paddingTop: "10%" }} />
           <PostAuthor>Posted by {document.data.author.text}</PostAuthor>
           <h2>{document.data.title.text}</h2>
           <BannerImage src={document.data.image.url} />

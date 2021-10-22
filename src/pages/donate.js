@@ -13,7 +13,7 @@ const PageWrapper = styled.div`
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout darkTextMenu={true}>
       <PageWrapper>
         <script
           src="https://donorbox.org/widget.js"

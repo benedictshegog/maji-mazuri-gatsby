@@ -28,8 +28,9 @@ const Posts = ({ data }) => {
 
   return (
     <>
-      <Layout darkTextMenu={false}>
+      <Layout darkTextMenu={true}>
         <NarrowPage>
+          <div style={{ paddingTop: "10%" }} />
           {posts.map((post) => {
             return (
               <Post

@@ -29,7 +29,7 @@ const MenuItem = styled.p`
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 700;
-  color: ${(props) => (props.darkTextMenu ? colors.grey500 : "white")};
+  color: ${(props) => (props.darkTextMenu ? colors.grey300 : "white")};
 `;
 
 const Logo = styled.img`

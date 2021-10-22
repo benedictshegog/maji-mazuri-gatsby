@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { colors } from "../styles/styles";
 
 const HamburgerIcon = styled.div`
   cursor: pointer;
@@ -17,7 +18,8 @@ const TopDiv = styled.div`
   transition: all 0.3s;
   width: 32px;
   height: 3px;
-  background-color: ${(props) => (props.darkTextMenu ? "black" : "white")};
+  background-color: ${(props) =>
+    props.darkTextMenu ? colors.grey400 : "white"};
   border-radius: 10px;
   position: relative;
   top: ${(props) => (props.clicked ? "0" : "4px")};
@@ -30,7 +32,8 @@ const BottomDiv = styled.div`
   height: 3px;
   border-radius: 10px;
   position: relative;
-  background-color: ${(props) => (props.darkTextMenu ? "black" : "white")};
+  background-color: ${(props) =>
+    props.darkTextMenu ? colors.grey400 : "white"};
   top: ${(props) => (props.clicked ? "0" : "-4px")};
   transform: ${(props) => (props.clicked ? "rotate(0)" : "rotate(135deg)")};
   margin: 6px 0;

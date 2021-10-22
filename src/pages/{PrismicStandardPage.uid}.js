@@ -11,7 +11,7 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout darkTextMenu={true}>
       <NarrowPage>
-        <h2>{document.data.page_title.text}</h2>
+        <h2 style={{ paddingTop: "10%" }}>{document.data.page_title.text}</h2>
         <RichText render={document.data.page_content.raw} />
       </NarrowPage>
     </Layout>
