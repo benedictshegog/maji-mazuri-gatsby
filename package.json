@@ -18,6 +18,7 @@
     "@fontsource/nunito-sans": "^4.5.1",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.14.2",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-analytics": "^3.14.0",
     "gatsby-plugin-image": "^1.14.1",
     "gatsby-plugin-react-helmet": "^4.14.0",

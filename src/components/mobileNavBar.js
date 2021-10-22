@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { navigate } from "gatsby";
-import { Link } from "gatsby";
 import { colors } from "../styles/styles";
 
 import HamburgerIcon from "./hamburgerIcon";
@@ -20,7 +19,8 @@ const MobileMenuBackground = styled.div`
 
 const MenuItem = styled.h2`
   text-align: center;
-  color: ${(props) => (props.lightMenu ? colors.grey500 : "white")};
+  color: ${colors.grey500};
+  cursor: pointer;
 `;
 
 export default function MobileNavBar(props) {
@@ -40,37 +40,15 @@ export default function MobileNavBar(props) {
         <HamburgerIcon onClick={handleClick} lightMenu={props.lightMenu} />
       ) : (
         <MobileMenuBackground>
-          <HamburgerIcon onClick={handleClick} />
-          <MenuItem
-            lightMenu={props.lightMenu}
-            onClick={handleNavigate("/about")}
-          >
-            About
+          <HamburgerIcon lightMenu={false} onClick={handleClick} />
+          <MenuItem onClick={handleNavigate("/")} style={{ paddingTop: "10%" }}>
+            Home
           </MenuItem>
-          <MenuItem
-            lightMenu={props.lightMenu}
-            onClick={handleNavigate("/volunteer")}
-          >
-            Volunteer
-          </MenuItem>
-          <MenuItem
-            lightMenu={props.lightMenu}
-            onClick={handleNavigate("/contact")}
-          >
-            Contact
-          </MenuItem>
-          <MenuItem
-            lightMenu={props.lightMenu}
-            onClick={handleNavigate("/blog")}
-          >
-            Blog
-          </MenuItem>
-          <MenuItem
-            lightMenu={props.lightMenu}
-            onClick={handleNavigate("/donate")}
-          >
-            Donate
-          </MenuItem>
+          <MenuItem onClick={handleNavigate("/about")}>About</MenuItem>
+          <MenuItem onClick={handleNavigate("/volunteer")}>Volunteer</MenuItem>
+          <MenuItem onClick={handleNavigate("/contact")}>Contact</MenuItem>
+          <MenuItem onClick={handleNavigate("/blog")}>Blog</MenuItem>
+          <MenuItem onClick={handleNavigate("/donate")}>Donate</MenuItem>
         </MobileMenuBackground>
       )}
     </>

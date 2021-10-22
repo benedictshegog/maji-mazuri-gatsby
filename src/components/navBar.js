@@ -24,7 +24,7 @@ const MenuItem = styled.p`
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 700;
-  color: ${(props) => (props.lightMenu ? colors.grey500 : "white")};
+  color: ${(props) => (props.lightMenu ? "white" : colors.grey500)};
 `;
 
 const Logo = styled.img`

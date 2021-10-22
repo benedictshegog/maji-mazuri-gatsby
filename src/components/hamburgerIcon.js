@@ -13,7 +13,7 @@ const TopDiv = styled.div`
   transition: all 0.3s;
   width: 32px;
   height: 3px;
-  background-color: ${(props) => (props.lightMenu ? "black" : "white")};
+  background-color: ${(props) => (props.lightMenu ? "white" : "black")};
   border-radius: 10px;
   position: relative;
   top: ${(props) => (props.clicked ? "0" : "4px")};
@@ -26,7 +26,7 @@ const BottomDiv = styled.div`
   height: 3px;
   border-radius: 10px;
   position: relative;
-  background-color: ${(props) => (props.lightMenu ? "black" : "white")};
+  background-color: ${(props) => (props.lightMenu ? "white" : "black")};
   top: ${(props) => (props.clicked ? "0" : "-4px")};
   transform: ${(props) => (props.clicked ? "rotate(0)" : "rotate(135deg)")};
   margin: 6px 0;
@@ -39,6 +39,7 @@ export default function HamburgerButton(props) {
     props.onClick();
   };
 
+  console.log(props);
   return (
     <div>
       <HamburgerIcon onClick={handleClick}>
