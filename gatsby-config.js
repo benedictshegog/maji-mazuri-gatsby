@@ -33,6 +33,7 @@ module.exports = {
         schemas: {
           standard_page: require("./src/schemas/standard_page.json"),
           page: require("./src/schemas/page.json"),
+          post: require("./src/schemas/post.json"),
         },
       },
     },

@@ -48,6 +48,15 @@ p {
   color: ${colors.grey400}
 }
 
+b {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: ${colors.grey400}
+}
+
 li {
   font-family: "Nunito Sans";
   font-style: normal;

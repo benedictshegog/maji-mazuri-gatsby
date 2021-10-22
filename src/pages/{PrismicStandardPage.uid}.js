@@ -9,9 +9,8 @@ const PageTemplate = ({ data }) => {
   const document = data.prismicStandardPage;
 
   return (
-    <Layout lightMenu={false}>
+    <Layout lightMenu={true}>
       <NarrowPage>
-        <div style={{ marginTop: "20%" }} />
         <h2>{document.data.page_title.text}</h2>
         <RichText render={document.data.page_content.raw} />
       </NarrowPage>

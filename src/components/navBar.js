@@ -57,7 +57,7 @@ export default function navBar(props) {
             Contact
           </MenuItem>
         </Link>
-        <Link to="/blog">
+        <Link to="/posts">
           <MenuItem lightMenu={props.lightMenu} landingPage={props.landingPage}>
             Blog
           </MenuItem>

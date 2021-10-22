@@ -47,7 +47,7 @@ export default function MobileNavBar(props) {
           <MenuItem onClick={handleNavigate("/about")}>About</MenuItem>
           <MenuItem onClick={handleNavigate("/volunteer")}>Volunteer</MenuItem>
           <MenuItem onClick={handleNavigate("/contact")}>Contact</MenuItem>
-          <MenuItem onClick={handleNavigate("/blog")}>Blog</MenuItem>
+          <MenuItem onClick={handleNavigate("/posts")}>Blog</MenuItem>
           <MenuItem onClick={handleNavigate("/donate")}>Donate</MenuItem>
         </MobileMenuBackground>
       )}

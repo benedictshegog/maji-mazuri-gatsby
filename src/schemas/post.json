@@ -1,0 +1,46 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "placeholder" : "UID",
+        "label" : "URL Slug"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "StructuredText",
+        "placeholder" : "Blog Title..."
+      }
+    },
+    "author" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label" : "Author",
+        "placeholder" : "Who wrote the blog?"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,strong,em,hyperlink",
+        "label" : "StructuredText",
+        "placeholder" : "A short description of the blog post"
+      }
+    },
+    "image" : {
+      "type" : "Image"
+    },
+    "body" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+        "label" : "Body",
+        "placeholder" : "Here's where you write the blog!"
+      }
+    }
+  }
+}
