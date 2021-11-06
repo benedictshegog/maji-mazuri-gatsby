@@ -39,6 +39,19 @@ const IndexPage = () => {
             title="donorbox"
           ></iframe>
         </div>
+        <p style={{ maxWidth: "400px" }}>
+          If you are considering making a large donation, please <br />
+          <a
+            href={"mailto:hello@majimazuri.org"}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            contact us
+          </a>{" "}
+          so that we can arrange a direct bank transfer to avoid the charity
+          paying large transaction fees
+        </p>
       </PageWrapper>
     </Layout>
   );
